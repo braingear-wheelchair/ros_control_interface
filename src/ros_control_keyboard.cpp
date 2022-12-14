@@ -111,19 +111,19 @@ int main(int argc, char* argv[]) {
 		/*** Select the vx, vy, vz velocities accordingly ***/
 		switch((char)key) {
 			case KEY_FORWARD:
-				vx = normalize_velocity(vx + VELOCITY_INCREMENT);
-				is_analog 	= true;
-				break;
-			case KEY_BACKWARD:
-				vx = normalize_velocity(vx - VELOCITY_INCREMENT);
-				is_analog 	= true;
-				break;
-			case KEY_RIGHT:
 				vy = normalize_velocity(vy + VELOCITY_INCREMENT);
 				is_analog 	= true;
 				break;
-			case KEY_LEFT:
+			case KEY_BACKWARD:
 				vy = normalize_velocity(vy - VELOCITY_INCREMENT);
+				is_analog 	= true;
+				break;
+			case KEY_RIGHT:
+				vx = normalize_velocity(vx + VELOCITY_INCREMENT);
+				is_analog 	= true;
+				break;
+			case KEY_LEFT:
+				vx = normalize_velocity(vx - VELOCITY_INCREMENT);
 				is_analog 	= true;
 				break;
 			case KEY_TURN_LEFT:
